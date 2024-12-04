@@ -35,15 +35,21 @@
         a:visited { background-color: indigo; }
         a:hover { background-color: darkBlue; }
         a:active { background-color: red; }
-
-        input {
-            border-radius: 5px;
-            display:block;
-            padding: 10px;
-            margin: 20px;
-            text-decoration: none;
-            width: auto;
+        .comment-block {
+            max-width: 500px; 
+            width: 80%; 
+            margin: 0 auto; 
+            text-align: center;
         }
+        .comment-entry {
+            display: flex; 
+            align-items: center; 
+        }
+        .comment-input {
+            flex:3;
+            margin-right: 10px;
+        }
+        .comment-button { flex:1; }
 
         @media (max-width: 1200px) {
             body { font-size: 3em; }
@@ -51,12 +57,6 @@
             a {
                 border-radius: 15px;
                 padding: 50px; 
-            }
-            input {
-                font-size: 1.5em;
-                border-radius: 15px;
-                width: 80%;
-                padding: 20px; 
             }
         }
     </style>
@@ -90,10 +90,13 @@
         </li>
     </ul>
 </div>
-<div align="center">
-    <h4>Your opinion doesn't matter to us!</h4> 
-    <input/>
-    <a href="index.html">delete comment</a>
+<div class="comment-block" >
+    <h4>comments</h4>
+    <div class="comment-entry">
+        <input type="text" class="comment-input" placeholder=
+                "write your comment here. It will not be saved or read."/>
+        <button class="comment-button">delete comment</button>
+    </div>
 </div>
 
 
